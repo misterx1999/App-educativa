@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Algoritmo 1",
+    "steps": [
+      { "text": "Inicio" },
+      { "text": "Entrada de datos" },
+      { "text": "Procesamiento" },
+      { "text": "Salida de datos" },
+      { "text": "Fin" }
+    ]
+  },
+  {
+    "title": "Algoritmo 2",
+    "steps": [
+      { "text": "Leer los datos" },
+      { "text": "Procesar los datos" },
+      { "text": "Verificar condiciones" },
+      { "text": "Generar resultados" },
+      { "text": "Mostrar resultados" }
+    ]
+  }
+]
