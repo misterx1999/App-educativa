@@ -1,28 +1,33 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.ts
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
+  // Asegúrate de que este módulo esté aquí
+  modules: ['@pinia/nuxt'],
+
   build: {
-    transpile: ['vuetify'] // Asegúrate de transpilar Vuetify
+    transpile: ['vuetify'],
   },
+
   css: [
-    'vuetify/styles', // Añadir los estilos de Vuetify
-    '@mdi/font/css/materialdesignicons.css' // Material Design Icons (si se requiere)
+    'vuetify/lib/styles/main.sass',
+    '@mdi/font/css/materialdesignicons.css',
   ],
-  plugins: ['~/plugins/vuetify.ts'], // Registrar el plugin de Vuetify
+
   vite: {
     define: {
-      'process.env.DEBUG': false // Evitar mensajes de debug innecesarios
-    }
+      'process.env.DEBUG': false,
+    },
   },
+
   app: {
     head: {
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap' // Enlace para la fuente "Press Start 2P"
-        }
-      ]
-    }
-  }
-})
+          href: 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap',
+        },
+      ],
+    },
+  },
+
+  compatibilityDate: '2024-11-20',
+});

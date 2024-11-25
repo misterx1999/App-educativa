@@ -1,22 +1,20 @@
 // plugins/vuetify.ts
 
-// Importar iconos de Material Design
 import '@mdi/font/css/materialdesignicons.css'
-
-// Importar estilos de Vuetify
 import 'vuetify/styles'
-
-// Importar Vuetify y sus módulos
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
-    components, // Registrar componentes globalmente
-    directives, // Registrar directivas
+    components: {
+      ...components,
+      'v-list-item-icon': components.VListItem, // Asegura que esté incluido
+    },// Registra todos los componentes globalmente
+    directives, // Registra todas las directivas globalmente
     theme: {
-      defaultTheme: 'light', // Puedes configurar el tema
+    defaultTheme: 'light',
       themes: {
         light: {
           colors: {
@@ -33,6 +31,5 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
   })
 
-  // Usa Vuetify en la aplicación
   nuxtApp.vueApp.use(vuetify)
 })

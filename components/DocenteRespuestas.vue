@@ -46,24 +46,19 @@ const sendAnswer = async () => {
     return;
   }
 
-  try {
-    await respuestasStore.addRespuesta({
-      id: Date.now(),
-      studentName: "Anónimo", // Puedes reemplazar esto con el nombre del estudiante si hay login
-      description: userAnswer.value,
-      valoracion: null,
-    });
+  await respuestasStore.addRespuesta({
+    id: Date.now(),
+    studentName: "Anónimo", // Nombre genérico
+    description: userAnswer.value,
+    valoracion: null,
+  });
 
-    result.value = "Tu respuesta ha sido enviada correctamente.";
-    userAnswer.value = ""; // Limpiar el campo de texto después del envío
-  } catch (error) {
-    result.value = "Ocurrió un error al enviar la respuesta.";
-  } finally {
-    showResult.value = true;
-    setTimeout(() => {
-      showResult.value = false;
-    }, 2000);
-  }
+  result.value = "Tu respuesta ha sido enviada correctamente.";
+  showResult.value = true;
+
+  setTimeout(() => {
+    showResult.value = false;
+  }, 2000);
 };
 </script>
 
