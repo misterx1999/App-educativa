@@ -15,11 +15,10 @@ Nuxt.js: Framework basado en Vue.js para construir aplicaciones web modernas y e
 Vuetify: Biblioteca de componentes con Material Design para crear interfaces atractivas y funcionales.
 Pinia: Sistema de gestión de estado global, empleado para almacenar y manipular datos de las actividades y respuestas.
 TypeScript: Lenguaje de programación con tipado estático que mejora la experiencia de desarrollo.
+
 Instalación
 Para instalar la aplicación en tu entorno local, sigue estos pasos:
 
-bash
-Copiar código
 # Clonar el repositorio  
 git clone https://github.com/misterx1999/jm.git  
 
@@ -34,8 +33,7 @@ Si necesitas variables de entorno personalizadas, agrégalas en un archivo .env 
 Uso
 Para ejecutar el servidor de desarrollo y probar la aplicación en tu navegador:
 
-bash
-Copiar código
+
 # Iniciar el servidor de desarrollo  
 npm run dev  
 
@@ -62,8 +60,7 @@ Gestión del Progreso: Registro de actividades completadas y resultados a travé
 Ejemplo de API
 El archivo server/api/respuestas/index.get.ts define un endpoint que devuelve las respuestas registradas por los usuarios:
 
-json
-Copiar código
+
 [  
   {  
     "id": 1,  
@@ -78,6 +75,7 @@ Copiar código
     "valoracion": "Incorrecta"  
   }  
 ]  
+
 Página de Actividades
 En pages/algoritmos.vue, los usuarios interactúan con las actividades principales de la app:
 
@@ -91,7 +89,7 @@ Ejemplo de Código
 Cómo registrar una respuesta en el store:
 
 typescript
-Copiar código
+
 const nuevaRespuesta = {  
   id: 3,  
   usuario: "Jesús",  
@@ -99,5 +97,7 @@ const nuevaRespuesta = {
   valoracion: "Correcta"  
 };  
 useRespuestaStore().agregarRespuesta(nuevaRespuesta);  
+
+
 Conclusión
 Algoritmos Interactivos es una herramienta innovadora que combina aprendizaje interactivo, retroalimentación inmediata y diseño intuitivo para ayudar a los estudiantes a dominar conceptos de lógica y algoritmos. Es ideal para fomentar el pensamiento crítico y el razonamiento lógico en un entorno educativo moderno.
