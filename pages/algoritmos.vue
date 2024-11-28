@@ -16,11 +16,11 @@
 </template>
 
 <script setup>
-import AlgoritmoStep from "@/components/AlgoritmoStep.vue";
+/*import AlgoritmoStep from "@/components/AlgoritmoStep.vue";
 import AlgoritmoChecker from "@/components/AlgoritmoChecker.vue";
 import VideoControl from "@/components/VideoControl.vue";
 import ActividadAlgoritmo from "@/components/ActividadAlgoritmo.vue";
-import { ref, onMounted } from "vue";
+import { ref, onMounted } from "vue";*/
 
 const shuffledSteps = ref([]);
 const correctOrder = ref([]);
