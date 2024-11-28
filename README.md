@@ -20,7 +20,7 @@ Instalación
 Para instalar la aplicación en tu entorno local, sigue estos pasos:
 
 # Clonar el repositorio  
-git clone https://github.com/misterx1999/jm.git  
+git clone https://github.com/misterx1999/App-educativa.git
 
 # Navegar a la carpeta del proyecto  
 cd jm  
